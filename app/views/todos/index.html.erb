@@ -3,14 +3,6 @@
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
 
-<%= search_form_for @q, url: todos_path, method: :get do |f| %>
-  <%= f.label :title_cont, "Search for:" %>
-  <%= f.text_field :title_cont %>
-  <%= f.submit "Search" %>
-<% end %>
-
-
-
 
 
 <table class="table table-striped">

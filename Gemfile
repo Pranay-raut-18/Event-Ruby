@@ -13,8 +13,8 @@ gem 'jquery-rails'
 # to login and Sign up
 gem 'devise'
 
-# To search 
-gem 'ransack'
+
+
 
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]

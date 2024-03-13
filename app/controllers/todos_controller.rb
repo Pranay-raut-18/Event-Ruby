@@ -3,12 +3,11 @@ class TodosController < ApplicationController
   before_action :set_todo, only: %i[ show edit update destroy ]
 
   # GET /todos or /todos.json  
-  def index
+  def index 
+    @todos = Todo.all
+
     @q = Todo.ransack(params[:q])
     @todos = @q.result(distinct: true)
-    @todos = @todos.all if params[:q].blank? # Show all todos if no search parameters are provided
-    
-    @todos = Todo.all
   end
 
   # GET /todos/1 or /todos/1.json
